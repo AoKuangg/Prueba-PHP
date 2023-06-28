@@ -14,8 +14,8 @@ USE campuslands;
 
 CREATE TABLE pais (
     idPais INT AUTO_INCREMENT, 
-nombrePais VARCHAR(70),
-PRIMARY KEY(idPais)
+    nombrePais VARCHAR(70),
+    PRIMARY KEY(idPais)
 );
 
 CREATE TABLE departamento (
@@ -51,9 +51,11 @@ CREATE TABLE campers (
 
 ```
 
-## C
+## Implementaciones
 
-Pull
+Se uso composer para la creacion de el autoload y se instalaron las siguientes dependencias para usarlas en el backend.
+* [Router](https://github.com/bramus/router)
+* [Enviroment](https://github.com/vlucas/phpdotenv)
 
 ## Errores
 * En la primera tabla "pais", se encontro que "nombrePais" estaba como tipo INT, se corrige al ponerlo como VARCHAT(70), con esto arreglando el problema.
