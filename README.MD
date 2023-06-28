@@ -45,11 +45,9 @@ CREATE TABLE campers (
     );
 ```
 
-## Usage
+## Uso
 
-```
-
-```
+No esta completo ni funcional la parte de frontend, pero si funciona el backend, por lo tanto usar solo el backend.
 
 ## Implementaciones
 
