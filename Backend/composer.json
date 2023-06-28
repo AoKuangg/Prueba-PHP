@@ -1,0 +1,21 @@
+{
+    "name": "apolt01-008/backend",
+    "description": "Proyecto en php, para la creacion de API que consumira los datos almacenados en una base de datos sql anteriormente creada. Se utilizara composer para el auto load y que se realice mas sencillo en proceso. A su vez se usaran dos dependencias para que sea aun mas sencillo el php.",
+    "autoload": {
+        "psr-4": {
+            "App\\": [
+                "./scripts/db"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "JuanCamiloPaezArizaCAMPUS",
+            "email": "camipa2305@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
