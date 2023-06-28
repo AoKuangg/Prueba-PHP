@@ -12,16 +12,37 @@ CREATE DATABASE campuslands;
 
 USE campuslands;
 
-CREATE TABLE pais (idPais INT AUTO_INCREMENT, nombrePais VARCHAR(70),PRIMARY KEY(idPais));
+CREATE TABLE pais (
+    idPais INT AUTO_INCREMENT, 
+nombrePais VARCHAR(70),
+PRIMARY KEY(idPais)
+);
 
-CREATE TABLE departamento (idDep INT AUTO_INCREMENT, nombreDep VARCHAR(50), 
-idPais INT, PRIMARY KEY (idDep), FOREIGN KEY(idPais) REFERENCES pais(idPais));
+CREATE TABLE departamento (
+    idDep INT AUTO_INCREMENT, 
+    nombreDep VARCHAR(50), 
+    idPais INT, 
+    PRIMARY KEY (idDep), 
+    FOREIGN KEY(idPais) REFERENCES pais(idPais)
+    );
 
-CREATE TABLE region (idReg INT AUTO_INCREMENT, nombreReg VARCHAR(60), 
-idDep INT, PRIMARY KEY (idReg), FOREIGN KEY (idDep) REFERENCES departamento(idDep));
+CREATE TABLE region (
+    idReg INT AUTO_INCREMENT, 
+    nombreReg VARCHAR(60), 
+    idDep INT, 
+    PRIMARY KEY (idReg), 
+    FOREIGN KEY (idDep) REFERENCES departamento(idDep)
+    );
 
-CREATE TABLE campers (idCamper INT AUTO_INCREMENT, nombreCamper VARCHAR(50),apellidoCamper VARCHAR(50),fechaNac DATE, 
-idReg INT, PRIMARY KEY (idCamper), FOREIGN KEY (idReg) REFERENCES region(idReg));
+CREATE TABLE campers (
+    idCamper INT AUTO_INCREMENT, 
+    nombreCamper VARCHAR(50),
+    apellidoCamper VARCHAR(50),
+    fechaNac DATE, 
+    idReg INT, 
+    PRIMARY KEY (idCamper), 
+    FOREIGN KEY (idReg) REFERENCES region(idReg)
+    );
 ```
 
 ## Usage
@@ -41,3 +62,6 @@ Pull
 
 ## Fotos
 
+* En la primera imagen se adjunta el proceso en la consola de la creacion de la base de datos ![](https://raw.githubusercontent.com/AoKuangg/Prueba-PHP/master/imgs/Script%20mysql.png)
+
+* En esta imagen se adjunta la base de datos finalizada representada en phpmyadmin ![](https://raw.githubusercontent.com/AoKuangg/Prueba-PHP/master/imgs/Base%20de%20datos%20final.png)
